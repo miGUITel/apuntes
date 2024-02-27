@@ -1,6 +1,6 @@
 # UT 4: DIAGRAMAS DE ESTADO
 
-####  [mapa](./mapa.html)
+####  [mapa](./mapa_copy.html)
 
 ## introducción
 
