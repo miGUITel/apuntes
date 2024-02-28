@@ -289,7 +289,7 @@ public class B {
 ```
 
 2. **Agregación:**
-   - **Consecuencia en Java:** Similar a la asociación, pero con la diferencia de que la parte (clase agregada) puede existir de forma independiente. Se utilizan referencias a la clase parte.
+   - **Consecuencia en Java:** Similar a la asociación, pero con la indicación explícita de que la parte (clase agregada) puede existir de forma independiente. Se utilizan referencias a la clase parte.
 
 ```java
 // Ejemplo de agregación
@@ -300,7 +300,7 @@ public class A {
 ```
 
 3. **Composición:**
-   - **Consecuencia en Java:** Similar a la agregación, pero en este caso, la parte no puede existir de forma independiente y generalmente se crea y se destruye junto con la clase contenedora.
+   - **Consecuencia en Java:** Similar a la agregación, pero en este caso, con la indicación explícita de que la parte no puede existir de forma independiente y generalmente se crea y se destruye junto con la clase contenedora.
 
 ```java
 // Ejemplo de composición
@@ -328,7 +328,7 @@ public class B extends A {
 ```
 
 5. **Realización (Implementación):**
-   - **Consecuencia en Java:** Se utiliza la palabra clave `implements` para indicar que una clase está implementando una interfaz. La clase debe proporcionar implementaciones para todos los métodos definidos por la interfaz.
+   - **Consecuencia en Java:** Se utiliza la palabra clave `implements` para indicar que una clase está implementando una interfaz. La clase debe proporcionar implementaciones para todos los métodos definidos por la interfaz. La interfaz se define como `public interface`.
 
 ```java
 // Ejemplo de realización (implementación)
@@ -362,7 +362,7 @@ Es fundamental recordar que, aunque estas relaciones en el modelo UML brindan un
      ```
 
 2. **Final:**
-   - **Significado:** Indica que un miembro no puede ser modificado después de su inicialización. En el caso de clases, impide que la clase sea subclase (heredada). En el caso de métodos, impide que el método sea sobrescrito en subclases.
+   - **Significado:** Indica que un miembro no puede ser modificado después de su inicialización. En el caso de clases, impide que la clase tenga subclases (heredadas). En el caso de métodos, impide que el método sea sobrescrito en subclases.
    - **Representación en UML:** Se indica agregando "{final}" después del nombre del miembro.
    - **Ejemplo en Java:**
      ```java
@@ -400,3 +400,19 @@ Es fundamental recordar que, aunque estas relaciones en el modelo UML brindan un
    - Los métodos abstractos no tienen implementación en la clase actual y deben ser proporcionados por las subclases. Estas subclases deben ser abstractas o proporcionar una implementación concreta para el método abstracto.
 
 En resumen, los modificadores static, final y abstract en Java y UML tienen impacto en la estructura, la instanciación, la herencia y la implementación de clases y miembros, y afectan cómo interactúan los objetos y las clases en un programa.
+
+**Diferencia entre interfaz y clase abstracta**
+
+Claro, aquí tienes una respuesta más concisa centrada en las diferencias clave:
+
+- **Interfaz:**
+  - Define métodos abstractos.
+  - No contiene implementaciones de métodos.
+  - Permite que una clase implemente múltiples interfaces.
+  - Utilizado para definir contratos y comportamientos.
+
+- **Clase abstracta:**
+  - Puede contener métodos concretos y abstractos.
+  - Permite heredar de una sola clase abstracta.
+  - Proporciona una implementación base para clases hijas.
+  - Útil para compartir código común y definir un conjunto común de métodos y comportamientos.
