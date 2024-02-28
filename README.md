@@ -1,5 +1,25 @@
 # UT 4: DIAGRAMAS DE ESTADO
 
+- [UT 4: DIAGRAMAS DE ESTADO](#ut-4-diagramas-de-estado)
+      - [mapa](#mapa)
+  - [introducción](#introducción)
+    - [1. ¿Por qué modelamos?](#1-por-qué-modelamos)
+    - [2. Los diagramas de clases y el desarrollo de software](#2-los-diagramas-de-clases-y-el-desarrollo-de-software)
+  - [POO](#poo)
+    - [3. Diseño y Programación Orientada a Objetos](#3-diseño-y-programación-orientada-a-objetos)
+    - [4. Elementos de la Programación Orientada a Objetso](#4-elementos-de-la-programación-orientada-a-objetso)
+      - [**Clases y Objetos:**](#clases-y-objetos)
+      - [**Métodos y Mensajes:**](#métodos-y-mensajes)
+      - [**Atributos y Estado:**](#atributos-y-estado)
+      - [**Constructores**](#constructores)
+  - [5. Características de los objetos](#5-características-de-los-objetos)
+  - [UML](#uml)
+    - [6. Diagramas de clases](#6-diagramas-de-clases)
+    - [Relaciones entre clases](#relaciones-entre-clases)
+    - [Consecuencias sobre el código Java](#consecuencias-sobre-el-código-java)
+    - [Otros modificadores](#otros-modificadores)
+
+
 ####  [mapa](./mapa_copy.html)
 
 ## introducción
@@ -236,24 +256,33 @@ En resumen, al modelar clases en UML, es crucial tener en cuenta la visibilidad,
 En la programación orientada a objetos (POO) y en la notación UML (Unified Modeling Language), hay varias relaciones posibles entre clases para modelar la estructura y el comportamiento de un sistema. Aquí te presento algunas de las relaciones más comunes:
 
 1. **Asociación:**
-   - **Definición:** Representa una relación entre dos clases donde un objeto de una clase está relacionado con un objeto de otra clase. Puede ser unidireccional o bidireccional.
+   - Representa una relación entre dos clases donde un objeto de una clase está relacionado con un objeto de otra clase. Puede ser unidireccional o bidireccional.
      - **Unidireccional:** Una clase está asociada con otra, pero la asociación es unidireccional. Se representa con una línea sólida que va desde la clase de origen a la clase de destino.
      - **Bidireccional:** Ambas clases están asociadas entre sí. Se representan con una línea sólida que conecta ambas clases.
    -  **Ejemplo UML:**
         - Unidireccional: `A --> B`
         - Bidireccional: `A <--> B`
+      - Un Coche utiliza la clase Calculadora para calcular la velocidad lineal.
+      - La clase Coche debe preocuparse de los cambios que se produzcan en la Calculadora.
+  ![Ejemplo asociación](./imagenes/asociacion.png)
 
 2. **Agregación:**
-   - **Definición:** Representa una relación de "todo-parte", donde una clase (todo) contiene a otra clase (parte). La parte puede existir de forma independiente de la clase contenedora.
+   - Representa una relación de "todo-parte", donde una clase (todo) contiene a otra clase (parte). La parte puede existir de forma **independiente** de la clase contenedora.
    - Se representa con un rombo hueco en la clase contenedora.
    - **Ejemplo UML:**
      - Rombo hueco en la clase contenedora: `A <>-- B`
-
+     - La clase Propietario contiene la clase Casa.
+     - El propietario debe saber cuáles son sus casas.
+     - Si una de las clases desaparece, la otra no deja de existir.
+![imagen agregación](./imagenes/agregación.png)
 3. **Composición:**
-    - **Definición:** Similar a la agregación, pero en este caso la parte no puede existir de forma independiente de la clase contenedora. La existencia de la parte está fuertemente vinculada a la existencia de la clase contenedora.
+    - Similar a la agregación, pero en este caso la parte no puede existir de forma independiente de la clase contenedora. La existencia de la parte está fuertemente vinculada a la existencia de la clase contenedora.
    - **Ejemplo UML:**
      - Rombo lleno en la clase contenedora: `A <>--* B`
    - Se representa con un rombo lleno en la clase contenedora.
+   - La clase Casa contiene instancias de la clase Ventana.
+   - Si la Casa desaparece las Ventanas también desaparecen.
+  ![imagen composición](./imagenes/composicion.png)
 
 4. **Herencia (Generalización):**
    - Representa una relación de "es-un". Una clase (subclase) hereda atributos y comportamientos de otra clase (superclase).
@@ -262,11 +291,10 @@ En la programación orientada a objetos (POO) y en la notación UML (Unified Mod
 
 5. **Realización (Implementación):**
    - Indica que una clase implementa una interfaz o cumple con un contrato definido por una interfaz.
-   - Se representa con una línea punteada que va desde la clase implementadora hacia la interfaz.
+   - Se representa con una línea punteada **con una flecha cerrada y hueca** que va desde la clase implementadora hacia la interfaz.
+   - La clase EstudianteBachillerato implementa los métodos de la interfaz ***Estudiante***.
+  ![imagen implementacion](./imagenes/interfaz.png)
 
-6. **Dependencia:**
-   - Indica que una clase depende de otra en algún grado. Un cambio en una clase puede afectar a la otra.
-   - Se representa con una línea punteada que va desde la clase dependiente hacia la clase de la que depende.
 
 Estas son solo algunas de las relaciones que se pueden modelar en UML. La elección de la relación dependerá de la naturaleza de la interacción entre las clases en el sistema que estás modelando.
 
@@ -281,22 +309,25 @@ Las relaciones en el modelo UML tienen impacto en la forma en que se estructura 
 ```java
 // Ejemplo de asociación unidireccional
 public class A {
+   //Atributos
     private B b;
     // ...
 }
 
 public class B {
+   //Atributos
     // ...
 }
 ```
 
 2. **Agregación:**
-   - **Consecuencia en Java:** Similar a la asociación, pero con la indicación explícita de que la parte (clase agregada) puede existir de forma independiente. Se utilizan referencias a la clase parte.
+   - **Consecuencia en Java:** ***Similar a la asociación***, pero con la indicación explícita de que la parte (clase agregada) puede existir de forma independiente. Se utilizan referencias a la clase parte.
 
 ```java
 // Ejemplo de agregación
 public class A {
-    private List<B> listaDeB;
+   //Atributos
+    private B b;
     // ...
 }
 ```
@@ -307,11 +338,13 @@ public class A {
 ```java
 // Ejemplo de composición
 public class A {
-    private List<B> listaDeB;
-    // ...
+   //Atributos
+    private B b;
+    //Constructor
     public A() {
-        listaDeB = new ArrayList<>();
+        b = new B;
     }
+    //...
 }
 ```
 
