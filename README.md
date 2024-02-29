@@ -295,7 +295,6 @@ En la programación orientada a objetos (POO) y en la notación UML (Unified Mod
    - La clase EstudianteBachillerato implementa los métodos de la interfaz ***Estudiante***.
   ![imagen implementacion](./imagenes/interfaz.png)
 
-
 Estas son solo algunas de las relaciones que se pueden modelar en UML. La elección de la relación dependerá de la naturaleza de la interacción entre las clases en el sistema que estás modelando.
 
 [Ejemplos de relaciones](./ejemplosRelacionesUML%20chat%20gpt.md)
@@ -309,14 +308,22 @@ Las relaciones en el modelo UML tienen impacto en la forma en que se estructura 
 ```java
 // Ejemplo de asociación unidireccional
 public class A {
-   //Atributos
-    private B b;
-    // ...
+   //Atributos   
+   //Métodos
+   public probar(){
+      b.hacer();
+   }
 }
 
 public class B {
    //Atributos
-    // ...
+   //Métodos
+   public hacer(){}
+}
+
+public class Main{
+   public A a = new A();
+   public B b = new B();
 }
 ```
 
@@ -327,8 +334,18 @@ public class B {
 // Ejemplo de agregación
 public class A {
    //Atributos
-    private B b;
+    private B bDeA = b;
     // ...
+}
+
+public class B {
+   //Atributos
+    // ...
+}
+
+public class Main{
+   public A a = new A();
+   public B b = new B();
 }
 ```
 
@@ -340,9 +357,9 @@ public class A {
 public class A {
    //Atributos
     private B b;
-    //Constructor
+   //Constructor
     public A() {
-        b = new B;
+        b = new B();
     }
     //...
 }
@@ -368,7 +385,8 @@ public class B extends A {
 ```java
 // Ejemplo de realización (implementación)
 public interface Interface {
-    void metodo();
+   //El método solamente se declara
+    public void metodo();
 }
 
 public class A implements Interface {
