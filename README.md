@@ -1,4 +1,5 @@
 # UT 4: DIAGRAMAS DE ESTADO
+[Versión web](https://miguitel.github.io/apuntes/)
 
 - [UT 4: DIAGRAMAS DE ESTADO](#ut-4-diagramas-de-estado)
       - [mapa](#mapa)
@@ -297,7 +298,7 @@ En la programación orientada a objetos (POO) y en la notación UML (Unified Mod
 
 Estas son solo algunas de las relaciones que se pueden modelar en UML. La elección de la relación dependerá de la naturaleza de la interacción entre las clases en el sistema que estás modelando.
 
-[Ejemplos de relaciones](./ejemplosRelacionesUML%20chat%20gpt.md)
+[Ejemplos de relaciones](./tablaEjemplosRelaciones.md)
 
 ### Consecuencias sobre el código Java
 Las relaciones en el modelo UML tienen impacto en la forma en que se estructura y organiza el código en Java. A continuación, describo las posibles consecuencias de cada una de las cinco relaciones (Asociación, Agregación, Composición, Herencia y Realización) sobre el código Java:
