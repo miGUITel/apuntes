@@ -460,8 +460,6 @@ En resumen, los modificadores static, final y abstract en Java y UML tienen impa
 
 **Diferencia entre interfaz y clase abstracta**
 
-Claro, aquí tienes una respuesta más concisa centrada en las diferencias clave:
-
 - **Interfaz:**
   - Define métodos abstractos.
   - No contiene implementaciones de métodos.
