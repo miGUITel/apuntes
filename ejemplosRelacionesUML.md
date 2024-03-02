@@ -120,5 +120,3 @@
 
 10. **Arreglo Musical - Nota:**
     - Un arreglo musical está compuesto por varias notas; las notas son parte de la composición y definen su melodía.
-
-Estos ejemplos ilustran cómo las relaciones de asociación, agregación y composición se aplican en diferentes contextos y cómo se pueden modelar en un sistema orientado a objetos.
