@@ -299,6 +299,7 @@ En la programación orientada a objetos (POO) y en la notación UML (Unified Mod
 Estas son solo algunas de las relaciones que se pueden modelar en UML. La elección de la relación dependerá de la naturaleza de la interacción entre las clases en el sistema que estás modelando.
 
 [Ejemplos de relaciones](./tablaEjemplosRelaciones.md)
+[Mapa de los ejemplos](./mapa_ejemplos.html)
 
 ### Consecuencias sobre el código Java
 Las relaciones en el modelo UML tienen impacto en la forma en que se estructura y organiza el código en Java. A continuación, describo las posibles consecuencias de cada una de las cinco relaciones (Asociación, Agregación, Composición, Herencia y Realización) sobre el código Java:
