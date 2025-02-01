@@ -190,7 +190,7 @@ Los constructores son esenciales para garantizar que los objetos se creen de man
 
 En resumen, las clases son plantillas que definen la estructura y el comportamiento común a un conjunto de objetos. Los objetos son instancias individuales de esas clases, con su propio estado y comportamiento. Los métodos son las acciones que los objetos pueden realizar, y los atributos son las propiedades que describen el estado de un objeto. La comunicación entre objetos se realiza mediante mensajes, que son solicitudes para ejecutar métodos específicos.
 
-## 5. Características de los objetos
+### 5. Características de los objetos
 
 En el contexto de la programación orientada a objetos (POO), conceptos fundamentales como la abstracción, la visibilidad y el encapsulamiento, la herencia, el polimorfismo, la sobrecarga y la sobrescritura son pilares esenciales que contribuyen a la construcción de sistemas flexibles y mantenibles. La abstracción permite modelar entidades del mundo real de manera efectiva, destacando características clave mientras se desecha la complejidad innecesaria. La visibilidad y el encapsulamiento controlan el acceso a los elementos de una clase, preservando la coherencia interna y favoreciendo cambios internos sin afectar el resto del sistema. La herencia facilita la reutilización del código, estableciendo relaciones entre clases y permitiendo la creación de jerarquías. El polimorfismo permite tratar objetos de manera uniforme a través de interfaces comunes, mientras que la sobrecarga y la sobrescritura ofrecen flexibilidad y adaptabilidad en la implementación de métodos. Estos conceptos, interrelacionados, forman la base sólida de la POO, impulsando el diseño eficiente y la construcción de sistemas robustos.
 
