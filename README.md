@@ -1,7 +1,7 @@
-# UT 4: DIAGRAMAS DE ESTADO
+# UT 4 y 5: DIAGRAMAS DE ESTADO - POO y CLASES UML
 [Versión web](https://miguitel.github.io/apuntes/)
 
-- [UT 4: DIAGRAMAS DE ESTADO](#ut-4-diagramas-de-estado)
+- [UT: DIAGRAMAS DE ESTADO](#ut-4-diagramas-de-estado)
       - [mapa](#mapa)
   - [introducción](#introducción)
     - [1. ¿Por qué modelamos?](#1-por-qué-modelamos)
@@ -13,7 +13,7 @@
       - [**Métodos y Mensajes:**](#métodos-y-mensajes)
       - [**Atributos y Estado:**](#atributos-y-estado)
       - [**Constructores**](#constructores)
-  - [5. Características de los objetos](#5-características-de-los-objetos)
+    - [5. Características de los objetos](#5-características-de-los-objetos)
   - [UML](#uml)
     - [6. Diagramas de clases](#6-diagramas-de-clases)
     - [Relaciones entre clases](#relaciones-entre-clases)
